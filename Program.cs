@@ -1,17 +1,18 @@
 ﻿using System;
 class program{
-      public static void Main()
-{
-	Console.WriteLine("10 upphöjt till 7: "+Power(10,7));
-	Console.WriteLine("2 upphöjt till 10: "+Power(2,10));
+    public static void Main() {
+	int a=10, b=20;
+	BytPlats(ref a,ref b);
+	//Här ska a ha värdet 20 och b värdet 10. 
+	Console.WriteLine( a+" "+b);
 }
+	
+	public static void BytPlats(ref int a, ref int b) {
+		int s=a; // så här funkar funktionen om varibel value ändras
+      a=b;
+      b=s;
 
-static double Power(double a, int b){
-double tal=1;
-for(int i=0; i<b;i++) {
-    tal= tal*a;
-}
-return tal;
+      
 }
 
 }
